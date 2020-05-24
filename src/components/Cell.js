@@ -6,8 +6,8 @@ const ImageCell = (props) => {
     const {imageHref} = props;
     return (
         <div className="item">
-            <img href={imageHref} alt="" className="wow zoomIn" data-wow-delay=".25s"/>
-            <a data-fancybox="group-4" className="fancyGallery" href={imageHref}/>
+            <img src={require("../img/img1.jpg")} alt="" className="wow zoomIn" data-wow-delay=".25s"/>
+            <a data-fancybox="group-4" className="fancyGallery" href={require("../img/img1.jpg")}></a>
         </div>
     )
 }
