@@ -13,7 +13,7 @@ class App extends Component {
     const imageImports = [];
 
     this.imageImport.keys().forEach(function(key) {
-        imageImports.push(key);
+      imageImports.push(key.substring(2));
     });
 
     this.imageImports = imageImports;
@@ -21,10 +21,9 @@ class App extends Component {
 
   // Keep in mind using that key might be bad practice.
   // https://stackoverflow.com/questions/28329382/understanding-unique-keys-for-array-children-in-react-js
-  generateAllImages = (images) => {
-    images = this.imageImports.map((image, key) => {
-        console.log(image)
-        return <ImageCell key={key} imageHref={image}/>;
+  generateAllImages = (imageImports) => {
+    const images = imageImports.map((image, key) => {
+        return <ImageCell key={key} imageHref={require(`./img/${image}`)}/>;
     });
 
     return images;
