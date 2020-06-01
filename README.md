@@ -2,7 +2,7 @@
 
 A simple, minimalist site for a photo grid, built in react.
 
-Front-end supplied by https://voidcoders.com/.
+Undergoing a front-end overhaul.
 
 ## Available Scripts
 
